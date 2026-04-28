@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nemo Store Insight Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0ea5e9;
+            --secondary: #0f172a;
+            --accent: #22d3ee;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background-color: #020617;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 1.5rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 0 30px rgba(14, 165, 233, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.9)), 
+                        url('./images/dashboard_hero_bg.png'); /* Note: I'll copy the generated image to images/ later */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #0ea5e9 0%, #22d3ee 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .chart-img {
+            border-radius: 1rem;
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+
+        .chart-container:hover .chart-img {
+            transform: scale(1.02);
+        }
+
+        .stat-card {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stat-label {
+            color: #94a3b8;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #020617;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #334155;
+        }
+
+        .insight-section {
+            line-height: 1.8;
+            white-space: pre-line;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Hero Section -->
+    <header class="hero-section min-h-[50vh] flex flex-col items-center justify-center text-center px-4 relative border-b border-white/5">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#020617]"></div>
+        <div class="relative z-10">
+            <span class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wider uppercase bg-sky-500/10 text-sky-400 rounded-full border border-sky-500/20">
+                Business Intelligence Report
+            </span>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
+                Nemo <span class="gradient-text">Store Insight</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto font-light">
+                서울 강남권 상업용 부동산 시장의 심층 데이터 분석 및 <br class="hidden md:block"> 전략적 비즈니스 통찰 대시보드
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-16">
+        
+        <!-- Stats Grid -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+            <div class="glass-card stat-card">
+                <span class="stat-value text-sky-400">473</span>
+                <span class="stat-label">분석 매물 총계</span>
+            </div>
+            <div class="glass-card stat-card">
+                <span class="stat-value text-emerald-400">4,111만</span>
+                <span class="stat-label">평균 보증금</span>
+            </div>
+            <div class="glass-card stat-card">
+                <span class="stat-value text-amber-400">300만</span>
+                <span class="stat-label">평균 월세</span>
+            </div>
+            <div class="glass-card stat-card">
+                <span class="stat-value text-rose-400">4,260만</span>
+                <span class="stat-label">평균 권리금</span>
+            </div>
+        </section>
+
+        <!-- Visualization Grid -->
+        <section class="mb-24">
+            <div class="flex items-center justify-between mb-12">
+                <h2 class="text-3xl font-bold">핵심 시각화 지표</h2>
+                <div class="h-[1px] flex-grow mx-8 bg-gradient-to-r from-sky-500/50 to-transparent"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Row 1 -->
+                <div class="glass-card p-6 chart-container">
+                    <h3 class="text-xl font-bold mb-4 text-slate-200">업종 대분류 빈도 분포</h3>
+                    <img src="./images/graph_1.png" alt="업종 대분류 빈도" class="chart-img">
+                    <p class="mt-4 text-sm text-slate-400 font-light italic">
+                        * 기타업종을 제외하면 일반음식점과 휴게음식점이 상권의 중심축을 형성하고 있습니다.
+                    </p>
+                </div>
+                <div class="glass-card p-6 chart-container">
+                    <h3 class="text-xl font-bold mb-4 text-slate-200">거래 형태별 가격 유형 분포</h3>
+                    <img src="./images/graph_2.png" alt="가격 유형 분포" class="chart-img">
+                    <p class="mt-4 text-sm text-slate-400 font-light italic">
+                        * 현재 시장의 거래 형태는 98.7%가 임대차 계약으로 이루어져 있습니다.
+                    </p>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="glass-card p-6 chart-container">
+                    <h3 class="text-xl font-bold mb-4 text-slate-200">보증금과 월세의 상관관계</h3>
+                    <img src="./images/graph_4.png" alt="상관관계 분석" class="chart-img">
+                    <p class="mt-4 text-sm text-slate-400 font-light italic">
+                        * 보증금과 월세는 약 0.81의 강한 양의 상관관계를 보이고 있습니다.
+                    </p>
+                </div>
+                <div class="glass-card p-6 chart-container">
+                    <h3 class="text-xl font-bold mb-4 text-slate-200">업종 중분류별 평균 월세</h3>
+                    <img src="./images/graph_5.png" alt="업종별 월세" class="chart-img">
+                    <p class="mt-4 text-sm text-slate-400 font-light italic">
+                        * 이동통신점, 스크린골프장 등 고수익 업종이 상위권을 차지합니다.
+                    </p>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="glass-card p-6 chart-container">
+                    <h3 class="text-xl font-bold mb-4 text-slate-200">주요 역세권별 관심도</h3>
+                    <img src="./images/graph_8.png" alt="역세권 관심도" class="chart-img">
+                    <p class="mt-4 text-sm text-slate-400 font-light italic">
+                        * 양재시민의숲역과 양재역 인근 도보 10분 내 매물의 인기가 가장 높습니다.
+                    </p>
+                </div>
+                <div class="glass-card p-6 chart-container">
+                    <h3 class="text-xl font-bold mb-4 text-slate-200">키워드 TF-IDF 분석</h3>
+                    <img src="./images/text_analysis.png" alt="텍스트 분석" class="chart-img">
+                    <p class="mt-4 text-sm text-slate-400 font-light italic">
+                        * '무권리', '인테리어', '역세권'이 임차인을 유혹하는 3대 핵심 키워드입니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deep Insights -->
+        <section class="mb-24">
+            <div class="flex items-center justify-between mb-12">
+                <h2 class="text-3xl font-bold">종합 비즈니스 통찰</h2>
+                <div class="h-[1px] flex-grow mx-8 bg-gradient-to-r from-emerald-500/50 to-transparent"></div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="glass-card p-8">
+                    <h4 class="text-xl font-bold mb-4 text-sky-400">1. 시장 구조의 본질: 초양극화</h4>
+                    <p class="text-slate-300 insight-section">
+                        서울 강남권 상업용 부동산 시장은 보증금과 월세의 상관계수가 0.81에 달할 정도로 입지 가치가 정교하게 가격에 반영되어 있습니다. 특히 역세권 도보 10분 이내 매물의 인기는 불황기일수록 안전 자산에 집중하려는 창업자들의 심리를 대변합니다.
+                    </p>
+                </div>
+                <div class="glass-card p-8">
+                    <h4 class="text-xl font-bold mb-4 text-emerald-400">2. 업종 전략: 틈새 기회 포착</h4>
+                    <p class="text-slate-300 insight-section">
+                        음식점업의 과밀화(Red Ocean) 속에서 배후 주거 수요를 겨냥한 서비스업(미용, 학원 등)의 비중이 상대적으로 낮은 점은 블루오션이 될 수 있습니다. 2층 이상의 매물을 활용한 온라인 기반 창업이 저비용 고효율 전략의 핵심입니다.
+                    </p>
+                </div>
+                <div class="glass-card p-8">
+                    <h4 class="text-xl font-bold mb-4 text-amber-400">3. 무권리 매물의 양면성</h4>
+                    <p class="text-slate-300 insight-section">
+                        '무권리' 키워드는 진입 장벽을 낮추는 강력한 유인책이지만, 동시에 입지적 결함의 징후일 수 있습니다. 데이터 기반의 유동인구 분석과 이전 임차인의 폐업 사유를 면밀히 검토하는 '냉철한 분석'이 동반되어야 성공 확률을 높일 수 있습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-white/5 py-12 text-center text-slate-500">
+        <p class="mb-2">&copy; 2026 Nemo Store Intelligence Dashboard. All rights reserved.</p>
+        <p class="text-sm font-light">Data Source: nemo_stores.db | Analyzed by AI Senior Data Analyst</p>
+    </footer>
+
+</body>
+</html>
