@@ -120,8 +120,8 @@ header: 'NEMO EDA'
 footer: '© 2026 NEMO | soneyabb'
 ---
 
-# **NEMO EDA REPORT**
-### 강남 상권 심층 분석
+# **네모 상가 데이터 EDA 리포트**
+### 심층 분석 및 비즈니스 전략 제언
 
 2026. 04. 29
 SENIOR ANALYST
