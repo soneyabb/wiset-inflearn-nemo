@@ -53,4 +53,6 @@ data/*.sqlite3
 
 # Project specific
 .agents/
+.npm_cache/
+scratch_b64.txt
 
