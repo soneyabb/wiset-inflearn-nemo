@@ -35,7 +35,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.jpg')
 
 ## **3. [시각화] 업종 대분류 빈도 분포**
 
-![w:800](./images/graph_1.png)
+![w:800](https://raw.githubusercontent.com/soneyabb/wiset-inflearn-nemo/feat/marp-slides/images/graph_1.png)
 
 - **음식점업 중심**: 일반음식점 및 휴게음식점이 전체의 중심축 형성
 - **인사이트**: 강력한 소비 상권임을 입증하나, 치열한 경쟁(Red Ocean) 예고
@@ -46,7 +46,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.jpg')
 
 | 거래 형태 (임대 vs 매매) | 보증금 구간 분포 |
 | :---: | :---: |
-| ![w:400](./images/graph_2.png) | ![w:400](./images/graph_3.png) |
+| ![w:400](https://raw.githubusercontent.com/soneyabb/wiset-inflearn-nemo/feat/marp-slides/images/graph_2.png) | ![w:400](https://raw.githubusercontent.com/soneyabb/wiset-inflearn-nemo/feat/marp-slides/images/graph_3.png) |
 - **임대 위주**: 98.7%가 임대차 계약 (수익형 부동산 특성)
 - **경제적 문턱**: 2,000만~5,000만 원 구간에 매물 최다 밀집
 
@@ -54,7 +54,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.jpg')
 
 ## **5. [시각화] 보증금-월세 상관관계**
 
-![w:750](./images/graph_4.png)
+![w:750](https://raw.githubusercontent.com/soneyabb/wiset-inflearn-nemo/feat/marp-slides/images/graph_4.png)
 
 - **상관계수 0.81**: 입지 가치가 가격에 매우 정직하게 반영됨
 - **전략**: 이상치(Outlier) 매물을 발굴하여 자금 효율성 극대화 필요
@@ -63,7 +63,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.jpg')
 
 ## **6. [시각화] 업종별 임대료(월세) 순위**
 
-![w:800](./images/graph_5.png)
+![w:800](https://raw.githubusercontent.com/soneyabb/wiset-inflearn-nemo/feat/marp-slides/images/graph_5.png)
 
 - **고비용 업종**: 이동통신점, 스크린골프장, 병원 등 (고수익 구조)
 - **생활 밀착형**: 카페, 음식점은 상대적으로 낮은 임대료 형성 (이면도로 진출 활발)
@@ -74,7 +74,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.jpg')
 
 | 건물 층수별 현황 | 면적 vs 권리금 상관관계 |
 | :---: | :---: |
-| ![w:400](./images/graph_6.png) | ![w:400](./images/graph_7.png) |
+| ![w:400](https://raw.githubusercontent.com/soneyabb/wiset-inflearn-nemo/feat/marp-slides/images/graph_6.png) | ![w:400](https://raw.githubusercontent.com/soneyabb/wiset-inflearn-nemo/feat/marp-slides/images/graph_7.png) |
 - **1층 절대우위**: 접근성이 가치를 결정 (지하층도 15%로 견고한 수요)
 - **권리금 특징**: 면적보다는 **시설 투자 및 단골 확보** 수준에 더 큰 영향
 
@@ -84,7 +84,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.jpg')
 
 | 주요 역세권별 조회수 | 거래 유형별 면적 비교 |
 | :---: | :---: |
-| ![w:400](./images/graph_8.png) | ![w:400](./images/graph_9.png) |
+| ![w:400](https://raw.githubusercontent.com/soneyabb/wiset-inflearn-nemo/feat/marp-slides/images/graph_8.png) | ![w:400](https://raw.githubusercontent.com/soneyabb/wiset-inflearn-nemo/feat/marp-slides/images/graph_9.png) |
 - **골든 라인**: 양재, 역삼, 도곡역 인근 도보 10분 내 매물에 관심 집중
 - **자산 규모**: 매매 매물이 임대 대비 대형 평수 위주로 형성
 
@@ -94,7 +94,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.jpg')
 
 | 업종별 보증금/월세 평균 | 매물 제목 키워드 분석 |
 | :---: | :---: |
-| ![w:400](./images/graph_10.png) | ![w:400](./images/text_analysis.png) |
+| ![w:400](https://raw.githubusercontent.com/soneyabb/wiset-inflearn-nemo/feat/marp-slides/images/graph_10.png) | ![w:400](https://raw.githubusercontent.com/soneyabb/wiset-inflearn-nemo/feat/marp-slides/images/text_analysis.png) |
 - **진입 비용**: 판매업 및 기타업종이 높은 경제적 장벽 형성
 - **3대 키워드**: **#무권리 #인테리어 #역세권**
 
